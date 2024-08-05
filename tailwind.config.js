@@ -4,15 +4,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins"],
+        sans: ["Poppins", "sans-serif"],
       },
       colors: {
-        secondary: "#2A4DD0",
-        primary: "#4CA154",
+        primary: "#2A4DD0",
+        secondary: "#4CA154",
         black: "#111729",
         "dark-gray": "#223344",
-        "medium-gray": "#223344",
-        "light-gray": "#F2F9FE",
+        "medium-gray": "#909193",
+        "light-blue": "#F2F9FE",
       },
     },
   },
