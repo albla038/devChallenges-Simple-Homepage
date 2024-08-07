@@ -1,11 +1,15 @@
-import { PRETITLE, SUBTITLE, TITLE } from "./App";
+type HeadingsProps = {
+  pretitle: string;
+  title: string;
+  subtitle: string;
+};
 
-export default function Headings() {
+export default function Headings({ pretitle, title, subtitle }: HeadingsProps) {
   return (
-    <section className="text-dark-gray text-sm font-semibold">
-      <p className="uppercase">{PRETITLE}</p>
-      <h1 className="mb-6 mt-4 text-6xl/normal font-bold">{TITLE}</h1>
-      <p className="text-medium-gray text-lg">{SUBTITLE}</p>
+    <section className="text-sm font-semibold text-dark-gray">
+      <p className="uppercase">{pretitle}</p>
+      <h1 className="mb-6 mt-4 text-6xl/normal font-bold">{title}</h1>
+      <p className="text-lg text-medium-gray">{subtitle}</p>
     </section>
   );
 }
