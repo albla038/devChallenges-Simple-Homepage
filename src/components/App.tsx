@@ -4,6 +4,7 @@ import CheckContainer from "./CheckContainer";
 import NavigationBar from "./NavigationBar";
 import Headings from "./Headings";
 import HeroImage from "./HeroImage";
+import clsx from "clsx";
 
 const PRETITLE = "😎  Simple way to communicate";
 
@@ -41,15 +42,23 @@ export default function App() {
     <div
       className={`relative min-h-screen bg-light-blue ${isDarkMode ? "dark" : ""}`}
     >
-      <NavigationBar isDarkMode={isDarkMode}
+      <NavigationBar
+        isDarkMode={isDarkMode}
         handleToggleHamburgerMenu={handleToggleHamburgerMenu}
         isHamburgerMenuOpen={isHamburgerMenuOpen}
-        handleToggleDarkMode={handleToggleDarkMode} />
-
-      
+        handleToggleDarkMode={handleToggleDarkMode}
+      />
 
       <HeroImage />
-      <main className="mx-16 space-y-10 pb-24">
+      <main
+        className={clsx([
+          "mx-16 space-y-10 pb-24",
+          // Large screen
+          "lg:mx-32",
+          // Extra large screen
+          "xl:",
+        ])}
+      >
         <Headings pretitle={PRETITLE} title={TITLE} subtitle={SUBTITLE} />
         <ButtonContainer />
         <CheckContainer data={FOOTER_DATA} />
