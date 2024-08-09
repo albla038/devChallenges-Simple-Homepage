@@ -17,8 +17,10 @@ export default function Headings({ pretitle, title, subtitle }: HeadingsProps) {
         "xl:w-full",
       ])}
     >
-      <p className="text-sm uppercase">{pretitle}</p>
-      <h1 className="mb-6 mt-4 text-6xl/normal font-bold">{title}</h1>
+      <p className="text-sm uppercase dark:text-white">{pretitle}</p>
+      <h1 className="mb-6 mt-4 text-6xl/normal font-bold dark:text-white">
+        {title}
+      </h1>
       <p
         className={clsx([
           "text-lg text-medium-gray",

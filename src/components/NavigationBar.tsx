@@ -18,10 +18,26 @@ export default function NavigationBar({
   return (
     <>
       <header className="flex items-center justify-between p-6 xl:px-16">
-        {/*TODO dark mode logo */}
-        <img src="/alarado-icon-homepage.svg" alt="Alardo Logo" />
+        {isDarkMode ? (
+          <img
+            src="/alarado-icon-homepage-dark.svg"
+            alt="Alardo Logo"
+            width={141}
+            height={24}
+          />
+        ) : (
+          <img
+            src="/alarado-icon-homepage.svg"
+            alt="Alardo Logo"
+            width={141}
+            height={24}
+          />
+        )}
         <nav className="hidden gap-12 text-sm font-semibold text-medium-gray lg:flex">
-          <a href="#" className="text-dark-gray hover:underline">
+          <a
+            href="#"
+            className="text-dark-gray hover:underline dark:text-white"
+          >
             About us
           </a>
           <a href="#" className="hover:underline">
@@ -41,7 +57,7 @@ export default function NavigationBar({
           />
         </div>
         <Menu
-          color="#111729"
+          color={isDarkMode ? "#ffffff" : "#111729"}
           size="28px"
           className="cursor-pointer lg:hidden"
           onClick={handleToggleHamburgerMenu}

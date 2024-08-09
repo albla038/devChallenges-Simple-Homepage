@@ -25,6 +25,8 @@ export default function HamburgerMenu({
         className={clsx([
           // Base styles
           "absolute inset-y-0 right-0 z-10 h-full w-[400px] bg-white",
+          // Dark mode styles
+          "dark:bg-[#1e2436]",
           // Entering styles
           "data-[enter]:data-[closed]:translate-x-full data-[enter]:duration-100",
           // Leaving styles
@@ -32,13 +34,13 @@ export default function HamburgerMenu({
         ])}
       >
         <X
-          color="#111729"
+          color={isDarkMode ? "#ffffff" : "#111729"}
           size="32px"
           className="absolute right-6 top-6 z-20 cursor-pointer"
           onClick={handleToggleHamburgerMenu}
         />
         <li className="flex list-none flex-col items-center gap-16 pt-20 text-5xl font-bold text-medium-gray">
-          <ul className="text-dark-gray">About us</ul>
+          <ul className="text-dark-gray dark:text-white">About us</ul>
           <ul>Product</ul>
           <ul>Resource</ul>
           <ul>Contact</ul>

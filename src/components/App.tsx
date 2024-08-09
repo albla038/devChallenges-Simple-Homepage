@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonContainer from "./ButtonContainer";
 import CheckContainer from "./CheckContainer";
 import NavigationBar from "./NavigationBar";
@@ -24,12 +24,22 @@ const FOOTER_DATA = [
   },
 ];
 
+// get initial theme from local storage
+function getInitialTheme() {
+  const value = localStorage.getItem("theme");
+  if (value) {
+    return JSON.parse(value);
+  } else {
+    return false;
+  }
+}
+
 export default function App() {
   // state
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(getInitialTheme);
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
-  // event handler
+  // event handlers
   const handleToggleDarkMode = () => {
     setDarkMode(!isDarkMode);
   };
@@ -38,9 +48,26 @@ export default function App() {
     setIsHamburgerMenuOpen(!isHamburgerMenuOpen);
   };
 
+  // side effects
+  // set theme in local storage
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(isDarkMode));
+    console.log(
+      "Theme set to: ",
+      isDarkMode ? "dark" : "light",
+      "in local storage",
+    );
+  }, [isDarkMode]);
+
   return (
     <div
-      className={`relative min-h-screen bg-light-blue ${isDarkMode ? "dark" : ""}`}
+      className={clsx([
+        "relative min-h-screen bg-light-blue",
+        // Set dark mode class
+        isDarkMode ? "dark" : "",
+        // Dark mode styles
+        "dark:bg-black",
+      ])}
     >
       <NavigationBar
         isDarkMode={isDarkMode}
