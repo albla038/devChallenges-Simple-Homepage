@@ -18,7 +18,7 @@ export default function Headings({ pretitle, title, subtitle }: HeadingsProps) {
       ])}
     >
       <p className="text-sm uppercase dark:text-white">{pretitle}</p>
-      <h1 className="mb-6 mt-4 text-6xl/normal font-bold dark:text-white">
+      <h1 className="mb-6 mt-4 text-5xl/normal font-bold sm:text-6xl/normal dark:text-white">
         {title}
       </h1>
       <p
