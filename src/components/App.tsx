@@ -52,11 +52,6 @@ export default function App() {
   // set theme in local storage
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(isDarkMode));
-    console.log(
-      "Theme set to: ",
-      isDarkMode ? "dark" : "light",
-      "in local storage",
-    );
   }, [isDarkMode]);
 
   return (
