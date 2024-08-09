@@ -15,11 +15,13 @@ export function useOutsideClick(callback: () => void) {
     }
 
     document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("touchstart", handleOutsideClick);
     document.addEventListener("touchend", handleOutsideClick);
 
     // cleanup function
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
       document.removeEventListener("touchend", handleOutsideClick);
     };
   }, [callback]);
