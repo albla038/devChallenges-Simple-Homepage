@@ -17,7 +17,7 @@ export default function NavigationBar({
 }: NavigationBarProps) {
   return (
     <>
-      <header className="flex items-center justify-between p-6">
+      <header className="flex items-center justify-between p-6 xl:px-16">
         {/*TODO dark mode logo */}
         <img src="/alarado-icon-homepage.svg" alt="Alardo Logo" />
         <nav className="hidden gap-12 text-sm font-semibold text-medium-gray lg:flex">

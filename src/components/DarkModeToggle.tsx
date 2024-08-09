@@ -7,8 +7,6 @@ export default function DarkModeToggle({
   isDarkMode,
   handleToggle,
 }: DarkModeToggleProps) {
-  console.log("isDarkMode: ", isDarkMode);
-
   return (
     <label className="group cursor-pointer">
       <input type="checkbox" onChange={handleToggle} className="sr-only" />

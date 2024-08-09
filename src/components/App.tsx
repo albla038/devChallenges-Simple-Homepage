@@ -49,20 +49,22 @@ export default function App() {
         handleToggleDarkMode={handleToggleDarkMode}
       />
 
-      <HeroImage />
-      <main
-        className={clsx([
-          "mx-16 space-y-10 pb-24",
-          // Large screen
-          "lg:mx-32",
-          // Extra large screen
-          "xl:",
-        ])}
-      >
-        <Headings pretitle={PRETITLE} title={TITLE} subtitle={SUBTITLE} />
-        <ButtonContainer />
-        <CheckContainer data={FOOTER_DATA} />
-      </main>
+      <div className="xl:mx-16 xl:mt-12 xl:flex xl:flex-row-reverse xl:items-center">
+        <HeroImage />
+        <main
+          className={clsx([
+            "mx-16 space-y-10 pb-24",
+            // Large screen
+            "lg:mx-32",
+            // Extra large screen
+            "xl:mx-0 xl:w-1/2",
+          ])}
+        >
+          <Headings pretitle={PRETITLE} title={TITLE} subtitle={SUBTITLE} />
+          <ButtonContainer />
+          <CheckContainer data={FOOTER_DATA} />
+        </main>
+      </div>
     </div>
   );
 }

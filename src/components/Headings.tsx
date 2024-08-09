@@ -13,6 +13,8 @@ export default function Headings({ pretitle, title, subtitle }: HeadingsProps) {
         "font-semibold text-dark-gray",
         // Large screen
         "lg:w-[750px]",
+        // Extra large screen
+        "xl:w-full",
       ])}
     >
       <p className="text-sm uppercase">{pretitle}</p>
