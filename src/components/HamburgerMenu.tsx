@@ -24,7 +24,8 @@ export default function HamburgerMenu({
         ref={ref}
         className={clsx([
           // Base styles
-          "absolute inset-y-0 right-0 z-10 h-full w-[400px] bg-white",
+          "absolute inset-y-0 right-0 z-10 h-full w-[300px] bg-white",
+          "sm:w-[400px]",
           // Dark mode styles
           "dark:bg-[#1e2436]",
           // Entering styles
@@ -39,7 +40,7 @@ export default function HamburgerMenu({
           className="absolute right-6 top-6 z-20 cursor-pointer"
           onClick={handleToggleHamburgerMenu}
         />
-        <li className="flex list-none flex-col items-center gap-16 pt-20 text-5xl font-bold text-medium-gray">
+        <li className="flex list-none flex-col items-center gap-12 pt-20 text-4xl font-bold text-medium-gray sm:gap-16 sm:text-5xl">
           <ul className="text-dark-gray dark:text-white">About us</ul>
           <ul>Product</ul>
           <ul>Resource</ul>
