@@ -75,7 +75,9 @@ export default function App() {
         <HeroImage />
         <main
           className={clsx([
-            "mx-16 space-y-10 pb-24",
+            "mx-8 space-y-10 pb-24",
+            // Small screen
+            "sm:mx-16",
             // Large screen
             "lg:mx-32",
             // Extra large screen
