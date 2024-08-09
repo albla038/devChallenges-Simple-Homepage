@@ -1,12 +1,8 @@
 type DarkModeToggleProps = {
-  isDarkMode: boolean;
   handleToggle: () => void;
 };
 
-export default function DarkModeToggle({
-  isDarkMode,
-  handleToggle,
-}: DarkModeToggleProps) {
+export default function DarkModeToggle({ handleToggle }: DarkModeToggleProps) {
   return (
     <label className="group cursor-pointer">
       <input type="checkbox" onChange={handleToggle} className="sr-only" />

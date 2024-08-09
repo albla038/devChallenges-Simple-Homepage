@@ -45,10 +45,7 @@ export default function HamburgerMenu({
           <ul>Resource</ul>
           <ul>Contact</ul>
           <ul>
-            <DarkModeToggle
-              isDarkMode={isDarkMode}
-              handleToggle={handleToggleDarkMode}
-            />
+            <DarkModeToggle handleToggle={handleToggleDarkMode} />
           </ul>
         </li>
       </nav>

@@ -52,7 +52,6 @@ export default function NavigationBar({
         </nav>
         <div className="hidden lg:block">
           <DarkModeToggle
-            isDarkMode={isDarkMode}
             handleToggle={handleToggleDarkMode}
           />
         </div>
